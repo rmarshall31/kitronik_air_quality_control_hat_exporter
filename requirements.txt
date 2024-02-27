@@ -1,0 +1,6 @@
+KitronikAirQualityControlHAT
+Pillow==9.5.0
+prometheus_client
+RPi.GPIO
+serial
+smbus
