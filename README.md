@@ -5,6 +5,11 @@ docker build -t kitronik_exporter .
 docker run --privileged -v /dev/gpiomem:/dev/gpiomem -v /dev/mem:/dev/mem -p 8000:8000 kitronik_exporter
 ```
 
+Alternatively:
+```bash
+docker pull rmarshall31/kitronik_exporter:latest
+```
+
 with docker-compose
 ```yaml
   kitronik-exporter:
