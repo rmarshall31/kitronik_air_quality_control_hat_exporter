@@ -1,6 +1,6 @@
-KitronikAirQualityControlHAT
+KitronikAirQualityControlHAT==1.0.0
 Pillow>=9.2,<10
-RPi.GPIO
-prometheus_client
-serial
-smbus
+RPi.GPIO==0.7.1
+prometheus_client==0.26.0
+pyserial==3.5
+smbus==1.1.post2
