@@ -11,14 +11,14 @@ docker run --privileged \
 
 Alternatively:
 ```bash
-docker pull rmarshall31/kitronik_exporter:latest
+docker pull ghcr.io/rmarshall31/kitronik_air_quality_control_hat_exporter:latest
 ```
 
 with docker-compose
 ```yaml
   kitronik-exporter:
     container_name: kitronik_exporter
-    image: kitronik_exporter:latest
+    image: ghcr.io/rmarshall31/kitronik_air_quality_control_hat_exporter:latest
     restart: always
     ports:
       - 8000:8000
