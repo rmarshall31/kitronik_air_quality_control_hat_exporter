@@ -2,7 +2,11 @@
 
 ```bash
 docker build -t kitronik_exporter .
-docker run --privileged -v /dev/gpiomem:/dev/gpiomem -v /dev/mem:/dev/mem -p 8000:8000 kitronik_exporter
+docker run --privileged \
+  -v /dev/gpiomem:/dev/gpiomem \
+  -v /dev/mem:/dev/mem \
+  -v kitronik-data:/var/lib/kitronik \
+  -p 8000:8000 kitronik_exporter
 ```
 
 Alternatively:
@@ -21,7 +25,11 @@ with docker-compose
     volumes:
       - /dev/gpiomem:/dev/gpiomem
       - /dev/mem:/dev/mem
+      - kitronik-data:/var/lib/kitronik
     privileged: true
+
+volumes:
+  kitronik-data:
 ```
 
 AQI & colors: https://www.airnow.gov/aqi/aqi-basics/
