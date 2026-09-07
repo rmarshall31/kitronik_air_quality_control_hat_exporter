@@ -1,4 +1,4 @@
-FROM python:3.11-alpine AS builder
+FROM python:3.14-alpine AS builder
 
 ARG TARGETARCH
 RUN if [ "$TARGETARCH" != "arm64" ]; then \
@@ -14,7 +14,7 @@ COPY requirements.txt .
 RUN python -m venv /opt/venv \
     && /opt/venv/bin/pip install --no-cache-dir -r requirements.txt
 
-FROM python:3.11-alpine
+FROM python:3.14-alpine
 
 WORKDIR /usr/src/app
 
