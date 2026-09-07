@@ -1,6 +1,6 @@
 KitronikAirQualityControlHAT
-Pillow==9.5.0
-prometheus_client
+Pillow>=9.2,<10
 RPi.GPIO
+prometheus_client
 serial
 smbus
